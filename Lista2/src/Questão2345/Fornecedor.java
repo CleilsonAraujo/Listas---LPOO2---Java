@@ -2,7 +2,8 @@ package Questão2345;
 
 public class Fornecedor extends Pessoa {
     double creditoMaximo, valorEmDivida;
-    public Fornecedor(double creditoMaximo, double valorEmDivida, String nome, int idade, double altura, char sexo) {
+    public Fornecedor(){}
+    public Fornecedor(double creditoMaximo, double valorEmDivida, String nome, int idade, double altura, String sexo) {
         super(nome, idade, altura, sexo);
         this.creditoMaximo = creditoMaximo;
         this.valorEmDivida = valorEmDivida;
@@ -22,5 +23,8 @@ public class Fornecedor extends Pessoa {
     double saldo;
     public void obterSaldo(){
         this.saldo = creditoMaximo-valorEmDivida;
+    }
+    public String obterSaldo1(){
+        return "\nSeu saldo: "+saldo;
     }
 }

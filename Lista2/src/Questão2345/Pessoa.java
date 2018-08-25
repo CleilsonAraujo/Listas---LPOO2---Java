@@ -1,12 +1,11 @@
 package Questão2345;
 
 public class Pessoa {
-    String nome; 
+    String nome, sexo; 
     int idade; 
     double altura;
-    char sexo;
     public Pessoa(){}
-    public Pessoa(String nome, int idade, double altura, char sexo) {
+    public Pessoa(String nome, int idade, double altura, String sexo) {
         this.nome = nome;
         this.idade = idade;
         this.altura = altura;
@@ -30,10 +29,10 @@ public class Pessoa {
     public void setAltura(double altura) {
         this.altura = altura;
     }
-    public char getSexo() {
+    public String getSexo() {
         return sexo;
     }
-    public void setSexo(char sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
     

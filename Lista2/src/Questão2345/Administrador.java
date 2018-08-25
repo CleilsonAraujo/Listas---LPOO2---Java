@@ -2,8 +2,9 @@ package Questão2345;
 
 public class Administrador extends Empregado {
     double ajudasDeCusto;
-    public Administrador(double salario, String nome, int idade, double altura, char sexo, double lucro) {
-        super(salario, nome, idade, altura, sexo, lucro);
+    public Administrador(){}
+    public Administrador(double salario, String nome, int idade, double altura, String sexo) {
+        super(salario, nome, idade, altura, sexo);
     }
     public double getAjudasDeCusto() {
         return ajudasDeCusto;
@@ -12,7 +13,11 @@ public class Administrador extends Empregado {
         this.ajudasDeCusto = ajudasDeCusto;
     }
     @Override
-    public void obterLucros() {
-        super.lucro = lucro+ajudasDeCusto;
+    public String obterLucros() {
+        return "\nSeu salario: "+soma;
+    }
+    double soma;
+    public void obterLucros1(){
+        this.soma = super.salario-this.ajudasDeCusto;
     }
 }

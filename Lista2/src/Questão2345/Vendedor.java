@@ -2,8 +2,9 @@ package Questão2345;
 
 public class Vendedor extends Empregado {
     double valorVendas, comissao;
-    public Vendedor(double salario, String nome, int idade, double altura, char sexo, double lucro) {
-        super(salario, nome, idade, altura, sexo, lucro);
+    public Vendedor(){}
+    public Vendedor(double salario, String nome, int idade, double altura, String sexo) {
+        super(salario, nome, idade, altura, sexo);
     }
     public double getValorVendas() {
         return valorVendas;
@@ -18,8 +19,12 @@ public class Vendedor extends Empregado {
         this.comissao = comissao;
     }
     @Override
-    public void obterLucros() {
-        super.lucro = comissao+salario;
+    public String obterLucros() {
+        return "\nSeu salario: "+soma;
     }
-    
+    double soma, porcem;
+    public void obterLucros1(){
+        this.porcem = (valorVendas*comissao)/100;
+        this.soma = super.salario+porcem;
+    }
 }

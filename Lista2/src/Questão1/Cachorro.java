@@ -2,6 +2,7 @@ package Questão1;
 
 public class Cachorro extends Animal {
     String nome, raça;
+    public Cachorro(){};
     public Cachorro(String nome, String raça, String tipo, String cor) {
         super(tipo, cor);
         this.nome = nome;
@@ -21,7 +22,7 @@ public class Cachorro extends Animal {
     }
     @Override
     public String toString() {
-        return "nome = " + nome + "\nraça = " + raça;
+        return "\nnome = " + nome + "\nraça = " + raça;
     }
     
 }
